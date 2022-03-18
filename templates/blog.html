@@ -1,0 +1,42 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="blog" id="blog">
+	<div class="container">
+		<div class="row">
+	    {% for article in articles %}
+			<div class="col-md-6">
+				<div class="post">
+					<!-- Post Image -->
+					<div class="post-img">
+						<img src="{% static 'me/images/blog/4.jpg' %}" class="img-fluid" alt="">
+					</div>
+					<!-- Post Content -->
+					<div class="post-content">
+						<div class="post-title">
+							<a href="% url 'blog-detail' pk=article.pk %}" target="_blank"><h4>{{article.titre}}</h4></a>
+						</div>
+						<div class="post-text">
+							<p>{{article.description}}</p>
+						</div>
+						<div class="post-date"><span>23</span>Dec</div>
+						<a href="{% url 'blog-detail' pk=article.pk %}" target="_blank" class="post-more">Read more</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="my-btn">
+			<a href="{% url 'blog' %}" target="_blank" class="main-btn">All Posts</a>
+		</div>
+	</div>
+</div>
+	
+{% endblock content %}
+	
+        
+			
+
+		

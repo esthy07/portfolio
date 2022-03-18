@@ -1,0 +1,433 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from hasnaanajmi.com/env/Evet/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Mar 2022 09:13:35 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Evet - Personal Portfolio">
+        <meta name="keywords" content="Html, Css, jQuery, JavaScript, Evet, responsive, onepage, personal, Portfolio, design, creative, template">
+        
+        <!-- Title -->
+        <title>Evet - Personal Portfolio</title>
+        <!-- Favicon --> 
+        <link rel="icon" href="{% static 'me/images/icon.png' %}">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800">
+                
+        <!-- Font Awesome Css -->
+        <link rel="stylesheet" href="{% static 'me/css/font-awesome.min.css' %}" >
+		<!-- Flaticon -->
+        <link rel="stylesheet" href="{% static 'me/fonts/flaticon.css' %}">
+        <!-- Magnific css -->
+        <link rel="stylesheet" href="{% static 'me/css/magnific-popup.css' %}">
+        <!-- Bootstrap 4 Css -->
+        <link rel="stylesheet" href="{% static 'me/css/bootstrap.min.css' %}">
+        <!-- Main Style Css -->
+        <link rel="stylesheet" href="{% static 'me/css/main.css' %}">
+		<!-- Colors Css -->
+        <link rel="stylesheet" href="{% static 'me/css/colors/gold_color.css' %}">
+        
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+       
+    </head>
+    <body>
+        
+        <!-- ========== Start Loading ========== -->
+        
+        <div class="preloader">
+            <div class="loading-inner">
+            </div>
+        </div>
+
+        <!-- ========== End Loading ========== -->
+		
+		<!-- ========== Start Color Switcher ========== -->
+        
+        <div class="switch-button"><i class="fa fa-cog fa-spin"></i></div>
+        <div class="switched-styles">
+            <h4>Color Switcher</h4>
+            <ul class="list-unstyled">
+                <li data-color="gold"></li>
+                <li data-color="yellow"></li>
+                <li data-color="orange"></li>
+                <li data-color="green"></li>
+                <li data-color="red"></li>
+                <li data-color="blue"></li>
+                <li data-color="purble"></li>
+                <li data-color="rose"></li>
+            </ul>
+            <div class="hide-button">&times;</div>
+        </div>
+        
+        <!-- ========== End Color Switcher ========== -->
+        
+        <!-- ========== Start Navbar ========== -->
+	
+		<div class="vertical-nav">
+			<!-- Logo -->
+			<a class="logo" href="#">E</a>
+		    <!-- Toggle Menu -->
+			<button class="toggle-menu">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</button>
+			<!-- Copyright -->
+			<p class="copyright"><a href="#" target="_blank">HasnaaDesign</a> &copy; 2020 made by love <i class="fa fa-heart"></i></p>
+            <!-- Mini Menu -->
+            <div class="mini-menu d-flex h-100 align-items-center justify-content-center text-center">
+				<ul class="list-unstyled">
+					<li><a class="active" href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+        </div>
+        
+        <!-- ========== End Navbar ========== -->
+		
+		<div class="page-content">
+			
+            <!-- ========== Start Home ========== -->
+			<section class="home active" id="home">
+				<div class="container-fluid">
+					<div class="row vheight">
+						<div class="col-lg-5 d-none d-lg-block no-padding">
+							<div class="home-img d-flex h-100 justify-content-center"></div>
+						</div>
+						<div class="col-lg-7 area-bg">
+							<div class="home-intro d-flex h-100 align-items-center">
+								<div class="home-info">
+									<h1>{{me.prenom}}</h1>
+									<div class="home-text">
+										<p>A Creative Freelancer &amp; Full Stack Developer</p>
+									</div>
+									<ul class="social-icons list-unstyled">
+										<li>
+											<a href="#">
+												<i class="fa fa-facebook"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-linkedin"></i>
+											</a>
+										</li>
+									</ul>
+									<a href="#" class="main-btn d-none d-sm-block">Hire Me</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+
+			<!-- ========== End Home ========== -->
+			
+			<!-- ========== Start About ========== -->
+        
+			<section id="about">
+				<!-- ========== Start About Me ========== -->
+				<div class="about-me container">
+					<div class="main-title">
+					    <h3>Discover</h3>
+						<h2>About Me</h2>
+					</div>
+					<div class="row">
+						<div class=" col-xl-5 col-lg-6">
+							<div class="about-image">
+								<img class="img-fluid" src="{% static 'me/images/about.jpg' %}" alt="">
+							</div>
+						</div>
+						<div class=" col-xl-7 col-lg-6">
+							<div class="about-info">
+								<h3>Hello! I am {{me.prenom}} {{me.nom}}</h3>
+								<p>I'm a Freelance Full Stack Developer based in New York, USA, and I'm very passionate and dedicated to my work .With 6 years experience as a professional Full Stack Developer, I have acquired the skills necessary to build great and premium websites.</p>
+								<div class="personal-info">
+									<div class="row">
+										<div class="col-sm-6">
+											<p><span>Name: </span>{{me.prenom}} {{me.nom}}</p>
+										</div>
+										<div class="col-sm-6">
+											<p><span>Age: </span>{{me.date_naissance}}</p>
+										</div>
+										<div class="col-sm-6">
+											<p><span>Phone: </span>{{me.telephone1}}</p>
+										</div>
+										<div class="col-sm-6">
+											<p><span>Address: </span>{{me.location}}</p>
+										</div>
+										<div class="col-sm-6">
+											<p><span>Experience: </span>6 Years</p>
+										</div>
+										<div class="col-sm-6">
+											<p><span>Freelance: </span>{{me.freelance}}</p>
+										</div>
+										<div class="col-sm-6">
+											<p><span>Skype: </span>razan.smith</p>
+										</div>
+										<div class="col-sm-6">
+											<p><span>Dribbble: </span>smith.dribbble</p>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="main-btn">Download CV</a>
+							</div>
+						</div>
+					</div> 
+				</div>
+				<!-- ========== End About Me ========== -->
+				
+				<!-- ========== Start Services ========== -->
+				<div class="services container">
+					<div class="main-title">
+						<h2>My Services</h2>
+					</div>
+					<div class="row">
+						{% for service in services %}
+						<div class="col-lg-3 col-sm-6">
+							<div class="service">
+								<span class="number">01</span>
+								<div class="service-icon">
+									<i class="flaticon-creativity"></i>
+								</div>
+								<h4>{{service.titre}}</h4>
+								<p>{{service.description}}</p>
+							</div>
+						</div>
+					{% endfor %}
+					</div>
+				</div>
+				<!-- ========== End Services ========== -->
+
+				<!-- ========== Start Skills ========== -->
+				<div class="skills container">
+					<div class="row">
+						{% for competence in competences %}
+						<div class="col-lg-4 col-sm-12">
+							<div class="progress-container">
+								<span class="percent" style="left: calc({{competence.niveau}}% - 21px);">{{competence.niveau}}%</span>
+								<h4>{{competence.activités}}</h4>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="{{competence.niveau}}" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<!-- ========== End Skills ========== -->
+
+				<!-- ========== Start Resume ========== -->
+				<div class="resume container">
+					<div class="main-title">
+						<h2>My Resume</h2>
+					</div>
+					<div class="resume-content">
+						<div class="row">
+							{% for education in educations %}
+							<div class="col-lg-6">
+								<div class="education">
+									<div class="resume-item">
+										<h5>{{education.etablissement}} - {{education.debut_fin}}</h5>
+										<div class="details">
+											<p>{{education.description}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<!-- ========== End Resume ========== -->
+			</section>
+
+			<!-- ========== End About ========== -->
+			
+			<!-- ========== Start Portfolio ========== -->
+        
+			<section id="portfolio">
+				<div class="portfolio container">
+					<div class="main-title">
+						<h3>Recent Works</h3>
+						<h2>My Portfolio</h2>
+					</div>
+					<div class="filter-menu">
+						<ul id="control" class="list-filter list-unstyled">
+							<li class="active" data-filter="all">All</li>
+							{% for categorie in catégoriesprojets %}
+						
+							<li data-filter="{{categorie.id}}">{{categorie.titre}}</li>
+							{% endfor %}
+						</ul>
+						
+					</div>
+					<div class="portfolio-content">
+						<div id="filtr-container" class="row">
+							{% for projet in projets %}
+							<div class="col-lg-4 col-md-6 filtr-item" data-category="{{projet.categorie.id}}" data-sort="value">
+								
+								<div class="item">
+									<img class="img-fluid" src="{% static 'me/images/portfolio/item-1.jpg' %}" alt="">
+									<div class="overlay">
+										<h4 class="item-title">{{projet.titre}}</h4>
+										<a class="icon-img" href="{% static 'me/images/portfolio/item-1.jpg' %}"><i class="fa fa-search-plus"></i></a>
+										<div class="item-category">
+											<span>{{projet.categorie}}</span>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>				
+			</section>
+
+			<!-- ========== End Portfolio ========== -->
+			
+			<!-- ========== Start Blog ========== -->
+        
+			<section id="blog">
+				<div class="blog container">
+					<div class="main-title">
+						<h3>Latest Posts</h3>
+						<h2>My Blog</h2>
+					</div>
+					<div class="row">
+						<!-- New Item -->
+						{% for article in articles %}
+						<div class="col-md-6">
+							<div class="post">
+								<!-- Post Image -->
+								<div class="post-img">
+									<img src="{% static 'me/images/blog/1.jpg' %}" class="img-fluid" alt="">
+								</div>
+								<!-- Post Content -->
+								<div class="post-content">
+									<div class="post-title">
+										<a href="{% url 'blog-detail' pk=article.pk %}" target="_blank"><h4>{{article.titre}}</h4></a>
+									</div>
+									<div class="post-text">
+										<p>{{article.description}}</p>
+									</div>
+									<div class="post-date"><span>23</span>Dec</div>
+									<a href="{% url 'blog-detail' pk=article.pk %}" target="_blank" class="post-more">Read more</a>
+								</div>
+							</div>
+							
+						</div>
+						{% endfor %}
+					</div>
+					<div class="my-btn">
+						<a href="{% url 'blog' %}" target="_blank" class="main-btn">All Posts</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- ========== End Blog ========== -->
+			
+			<!-- ========== Start Contact ========== -->
+        
+			<section id="contact">
+				<div class="contact container">
+					<div class="main-title">
+						<h3>Get In Touch</h3>
+						<h2>Contact Me</h2>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 offset-lg-0 col-md-10 offset-md-1">
+							<div class="contact-boxes">
+								<div class="contact-box">
+									<span class="icon-box"><i class="flaticon-location"></i></span>
+									<h4 class="title-box">Location</h4>
+									<div class="content-box">
+										<p>NewYork, USA</p>
+										<p>10 Street Name</p>
+									</div>
+								</div>
+								<div class="contact-box two">
+									<span class="icon-box"><i class="flaticon-email"></i></span>
+									<h4 class="title-box">Email</h4>
+									<div class="content-box">
+										<p><a href="https://hasnaanajmi.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d381b2a9b2bda0bebaa7bb93babdb5bca0fdb0bcbe">[email&#160;protected]</a></p>
+										<p><a href="https://hasnaanajmi.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99caece9e9f6ebedd9fce1f8f4e9f5fcb7faf6f4">[email&#160;protected]</a></p>
+									</div>
+								</div>
+								<div class="contact-box">
+									<span class="icon-box"><i class="flaticon-call"></i></span>
+									<h4 class="title-box">Phone</h4>
+									<div class="content-box">
+										<p>+1 212 451-4127</p>
+										<p>+1 212 658-2581</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-8 offset-lg-0 col-md-10 offset-md-1">
+							<form class="contact-form" action="https://hasnaanajmi.com/env/Evet/mail.php" method="post">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Subject" id="subject" name="subject" required>
+								</div>
+								<div class="form-group">
+									<textarea class="form-control" placeholder="Your Message" id="message" name="message" required></textarea>
+								</div>
+								<!-- Button Send Message -->
+								<button class="contact-btn main-btn" type="submit" name="send">Send Message</button>
+								<!-- Form Message  -->
+							    <div class="form-message text-center"><span></span></div>
+							</form> 
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ========== End Contact ========== -->
+			
+		</div>
+		
+        
+        <!-- ========== Js ========== -->
+
+        <!-- jQuery -->
+        <script data-cfasync="false" src="https://hasnaanajmi.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.2.1.min.js"></script>
+        <!-- Popper Js  -->
+		
+    	<script src="{% static 'me/js/popper.min.js' %}"></script>
+		  <script src="{% static 'me/js/jquery-3.2.1.min.js' %}"></script>
+        <!-- Bootstrap 4 Js -->
+        <script src="{% static 'me/js/bootstrap.min.js' %}"></script>
+        <!-- filterizr JS file -->
+        <script src="{% static 'me/js/jquery.filterizr.js' %}"></script>
+        <!-- Magnific Popup JS  -->
+        <script src="{% static 'me/js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Custom Js -->
+        <script src="{% static 'me/js/custom.js' %}"></script>
+    </body>
+
+<!-- Mirrored from hasnaanajmi.com/env/Evet/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Mar 2022 09:13:59 GMT -->
+</html>
